@@ -5,5 +5,5 @@ class TxtFileParser:
     def parse(self):
         with open(self.file) as f:
             for line in range(5):
-                email, _, password = f.readline().partition(":")
+                email, _, password = f.readline().strip().partition(":")
                 print("{} {}".format(email, password))
